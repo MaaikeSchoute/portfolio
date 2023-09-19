@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+
+body {
+    background-color: plum;
+    text-align: center;
+}
+
+h1 {
+    background-color: aliceblue;
+    color:blueviolet;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h2 {
+    font-family: Helvetica, Arial,  sans-serif;
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+nav {
+    background-color: blueviolet;
+    color: azure;
+}
+
+li {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+div {
+    color: #FFF;
+    background-color: #5995DA;
+    font-weight: bold;
+    padding: 2vw;
+    text-align: left;
+    border: 0.5vw solid #5D6063;
+    border-radius: 0.5vw;
+
+    width: 50vh;
+    box-sizing: border-box; /* add this line to any div, or span boxes, because it keepsthesize of the box exactly thesize you want it to be.*/
+    margin: auto;
+  }
+
+  .nav {
+    float: left;
+    margin-left: 40vh;
+  }
+
+  .content {
+    float: right;
+  }
+
+  .footer {
+    float: center bottom;
+  }
