@@ -1,61 +1,213 @@
 * {
-    padding: 0;
-    margin: 0;
+    font-family: Roboto, sans-serif;
     box-sizing: border-box;
+    text-align: justify;
+    color:#464a75;
 }   
 
-body {
-    background-color: plum;
+/* hier komen alle Headings */
+h1, h2, h3, li {
+    font-family: 'EB Garamond', serif;
+    color:#464a75;
     text-align: center;
 }
 
-h1 {
-    background-color: aliceblue;
-    color:blueviolet;
-    font-family: Helvetica, Arial, sans-serif;
+/* hier komen alle semiotics*/
+body {
+    background-image: url('img/icoontjes/achtergrond3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color:#F5F5F5;
+    justify-content: center;
+    height: 100vh;
 }
 
-h2 {
-    font-family: Helvetica, Arial,  sans-serif;
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+    margin: 0em 2em 2em 2em;
+    border-bottom: 1px solid #464a75;
 }
 
-p {
-    font-family: Helvetica, Arial, sans-serif;
-
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em;
 }
 
-nav {
-    background-color: blueviolet;
-    color: azure;
-}
-
-li {
-    font-family: Helvetica, Arial, sans-serif;
-}
-
-div {
-    color: #FFF;
-    background-color: #5995DA;
-    font-weight: bold;
-    padding: 2vw;
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: left;
-    border: 0.5vw solid #5D6063;
-    border-radius: 0.5vw;
+    width: 35em; /* Breedte van de cirkel */
+    height: 35em; /* Hoogte van de cirkel */
+    background-color: rgba(220, 222, 245, 0.97);
+    border-radius: 50%;
+    line-height: 20px;
+    padding:10%;
+}
 
-    width: 50vh;
-    box-sizing: border-box; /* add this line to any div, or span boxes, because it keepsthesize of the box exactly thesize you want it to be.*/
-    margin: auto;
-  }
+.circle-move {
+    animation-name: move;
+    animation-duration: 8s;
+    animation-iteration-count: start;
+}
 
-  .nav {
-    float: left;
-    margin-left: 40vh;
-  }
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(245, 245, 245, 0.97);
+    width: 100vw;
+    border-top: 1px solid #464a75;
+    border-bottom: 1px solid #464a75;
+    padding: 5%;
+}
 
-  .content {
-    float: right;
-  }
+.tekst-container {
+    max-width: 40vw;
+    min-width: 20vw; /* Pas dit aan naar de gewenste maximale breedte */
+    margin: 0 auto; /* Centreer de container horizontaal in de viewport (optioneel) */
+    padding: 3%; /* Voeg wat ruimte rondom de tekst toe (optioneel) */
+}
 
-  .footer {
-    float: center bottom;
+.container {
+    display: flex;
+    justify-content: center; /* Horizontaal centreren */
+    flex-wrap: wrap;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F5F5F5;
+    border-top: 1px solid #464a75;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: rgb(220, 222, 245); 
+    width: 30vw;
+    height: 29vw;
+    padding: 0;
+}
+
+.winkel {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #cccdff;
+    height: 100vh;
+    width: 20vw;
+    height: 50vh;
+    padding: 5%;
+    margin: 2%;
+}
+
+/*click ding voor de winkel*/
+fieldset {
+    background-color: #F5F5F5;
+    border: 0px;
+    margin: 5%;
+}
+
+legend {
+    font-family:'EB Garamond', serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+}
+
+/* navigatie */
+nav {
+    display: flex;
+    justify-content: right;
+    background-color: #F5F5F5;
+    color: #464a75;
+    text-decoration: none;
+    padding: 1em;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: right;
+}
+
+a {
+    font-size: 0.9em;
+    padding: 1vw;
+    text-decoration: none;
+}
+
+a:visited{
+    background-color: #DBDBDB;
+}
+
+a:hover {
+    background-color:rgba(220, 222, 245, 0.97);
+    transition: all 500ms ease;
+}
+
+a:active{
+    background-color:#cccdff;
+}
+
+a:focus{
+    border: #464a75;
+    border-radius: 0.5em;
+}
+
+.a-portfolio {
+    padding: 0px;
+    transition: all 500ms ease;
+}
+
+.a-portfolio:hover {
+    background-color:rgba(220, 222, 245, 0.97);
+}
+
+img {
+    max-width: 100%;
+}
+
+.cover-img {
+    width: 50%;
+
+}
+
+/*Animations*/
+@keyframes bounce {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    25% {
+      left: calc(100% - 30px);
+      top: 0;
+    }
+    50% {
+      left: calc(100% - 30px);
+      top: calc(100% - 30px);
+    }
+    75% {
+      left: 0;
+      top: calc(100% - 30px);
+    }
+    100% {
+      left: 0;
+      top: 0;
+    }
   }
+  
