@@ -3,6 +3,8 @@
     box-sizing: border-box;
     text-align: justify;
     color:#464a75;
+    margin: 0; 
+    padding: 0;
 }   
 
 /* hier komen alle Headings */
@@ -16,11 +18,9 @@ h1, h2, h3, li {
 body {
     background-image: url('img/icoontjes/achtergrond3.png');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center top;
     background-color:#F5F5F5;
-    justify-content: center;
-    height: 100vh;
 }
 
 header {
@@ -33,9 +33,42 @@ header {
 
 main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin: 2em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-top: 1px solid #464a75;
+}
+
+#home {
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes slide {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 100px;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+#home:hover .circle{
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
 }
 
 .circle {
@@ -50,12 +83,11 @@ main {
     border-radius: 50%;
     line-height: 20px;
     padding:10%;
+    position: relative;
 }
 
-.circle-move {
-    animation-name: move;
-    animation-duration: 8s;
-    animation-iteration-count: start;
+.circle h1 {
+    margin-bottom: 1em;
 }
 
 article {
@@ -80,17 +112,6 @@ article {
     display: flex;
     justify-content: center; /* Horizontaal centreren */
     flex-wrap: wrap;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #F5F5F5;
-    border-top: 1px solid #464a75;
 }
 
 .project {
@@ -168,15 +189,8 @@ a:focus{
     border: #464a75;
     border-radius: 0.5em;
 }
+/* einde nav */
 
-.a-portfolio {
-    padding: 0px;
-    transition: all 500ms ease;
-}
-
-.a-portfolio:hover {
-    background-color:rgba(220, 222, 245, 0.97);
-}
 
 img {
     max-width: 100%;
@@ -184,30 +198,20 @@ img {
 
 .cover-img {
     width: 50%;
+} 
 
+/*portfolio link hover*/
+.a-portfolio {
+    padding: 0px;
+    transition: all 500ms ease;
 }
 
-/*Animations*/
-@keyframes bounce {
-    0% {
-      left: 0;
-      top: 0;
-    }
-    25% {
-      left: calc(100% - 30px);
-      top: 0;
-    }
-    50% {
-      left: calc(100% - 30px);
-      top: calc(100% - 30px);
-    }
-    75% {
-      left: 0;
-      top: calc(100% - 30px);
-    }
-    100% {
-      left: 0;
-      top: 0;
-    }
-  }
-  
+.project img {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.project img:hover {
+    transform: scale(1.01) translate(0, -30px);
+    background-color: #464a75;
+    opacity: 0.9;
+}
