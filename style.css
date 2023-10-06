@@ -17,7 +17,7 @@ h1, h2, h3, li {
 /* hier komen alle semiotics*/
 body {
     background-image: url('img/icoontjes/achtergrond3.png');
-    background-size: cover;
+    background-size: 70vw;
     background-repeat: repeat;
     background-position: center top;
     background-color:#F5F5F5;
@@ -53,17 +53,18 @@ footer {
 
 @keyframes slide {
     0% {
-      top: 0;
+      top: 50%;
     }
     50% {
       top: 100px;
     }
     100% {
-      top: 0;
+      top: 50%;
     }
   }
 
-#home:hover .circle{
+#home .circle{
+    bottom:100%;
     animation-name: slide;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -83,14 +84,14 @@ footer {
     border-radius: 50%;
     line-height: 20px;
     padding:10%;
-    position: relative;
+    position: absolute;
 }
 
 .circle h1 {
     margin-bottom: 1em;
 }
 
-article {
+.winkel-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -103,9 +104,9 @@ article {
 
 .tekst-container {
     max-width: 40vw;
-    min-width: 20vw; /* Pas dit aan naar de gewenste maximale breedte */
+    min-width: 20vw;
     margin: 0 auto; /* Centreer de container horizontaal in de viewport (optioneel) */
-    padding: 3%; /* Voeg wat ruimte rondom de tekst toe (optioneel) */
+    padding: 3%;
 }
 
 .container {
@@ -141,6 +142,7 @@ fieldset {
     background-color: #F5F5F5;
     border: 0px;
     margin: 5%;
+    padding: 5%
 }
 
 legend {
