@@ -287,6 +287,7 @@ fieldset {
         margin-top: 1em;
     }
 
+
     .circle {
         display: flex;
         justify-content: center;
@@ -322,8 +323,6 @@ fieldset {
         max-width: 6em;
     }
 
-
-
     .tekst-container {
         max-width: 60vw;
         min-width: 20vw;
@@ -357,5 +356,4 @@ fieldset {
         width: 41.4688vw;
         height: auto;
     }
-    
 }
