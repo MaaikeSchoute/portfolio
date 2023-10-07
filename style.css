@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: #F5F5F5;
-    margin: 0em 2em 2em 2em;
+    margin: 0 2em 2em 2em;
     border-bottom: 1px solid #464a75;
 }
 
@@ -38,6 +38,8 @@ footer {
     justify-content: center;
     background-color: #F5F5F5;
     border-top: 1px solid #464a75;
+    padding: 1%;
+    margin: 0 2em 0 2em;
 }
 
 h1, h2, h3, li {
@@ -46,9 +48,74 @@ h1, h2, h3, li {
     text-align: center;
 }
 
+nav {
+    display: flex;
+    justify-content: right;
+    background-color: #F5F5F5;
+    color: #464a75;
+    text-decoration: none;
+    padding: 1em;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: right;
+}
+
+a {
+    font-size: 0.9em;
+    padding: 1vw;
+    text-decoration: none;
+}
+
+a:visited{
+    background-color: #DBDBDB;
+}
+
+a:hover {
+    background-color:rgba(220, 222, 245, 0.97);
+    transition: all 500ms ease;
+}
+
+a:active{
+    background-color:#cccdff;
+}
+
+a:focus{
+    border: #464a75;
+    border-radius: 0.5em;
+}
+
+header h2 {
+    margin-top: 0.5%;
+}
+
+img {
+    max-width: 40vw;
+    max-height: 20vw;
+    margin: 0.1em;
+}
+
+.one-img-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+fieldset {
+    background-color: #F5F5F5;
+    width: 70%;
+    border: 0px;
+    margin: 5%;
+    padding: 2%
+}
+
 .home {
     height: 100vh;
     width: 100%;
+    margin: 0 2em 0 2em;
 }
 
 .circle {
@@ -57,13 +124,13 @@ h1, h2, h3, li {
     align-items: center;
     flex-direction: column;
     text-align: left;
-    width: 35em; /* Breedte van de cirkel */
-    height: 35em; /* Hoogte van de cirkel */
+    width: 35em;
+    height: 35em;
     min-width: 10em;
     min-height: 10em;
     background-color: rgba(220, 222, 245, 0.97);
     border-radius: 50%;
-    line-height: 20px;
+    line-height: 1.2em;
     padding:10%;
     position: absolute;
 }
@@ -107,13 +174,12 @@ h1, h2, h3, li {
 .tekst-container {
     max-width: 40vw;
     min-width: 20vw;
-    /* margin: 0 auto; Centreer de container horizontaal in de viewport */
     padding: 3%;
 }
 
 .container {
     display: flex;
-    justify-content: center; /* Horizontaal centreren */
+    justify-content: center;
     flex-wrap: wrap;
 
 }
@@ -140,68 +206,9 @@ h1, h2, h3, li {
     margin: 2%;
 }
 
-/*click ding voor de winkel*/
-fieldset {
-    background-color: #F5F5F5;
-    width: 70%;
-    border: 0px;
-    margin: 5%;
-    padding: 2%
-}
-
-/* navigatie */
-nav {
-    display: flex;
-    justify-content: right;
-    background-color: #F5F5F5;
-    color: #464a75;
-    text-decoration: none;
-    padding: 1em;
-}
-
-ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: right;
-}
-
-a {
-    font-size: 0.9em;
-    padding: 1vw;
-    text-decoration: none;
-}
-
-a:visited{
-    background-color: #DBDBDB;
-}
-
-a:hover {
-    background-color:rgba(220, 222, 245, 0.97);
-    transition: all 500ms ease;
-}
-
-a:active{
-    background-color:#cccdff;
-}
-
-a:focus{
-    border: #464a75;
-    border-radius: 0.5em;
-}
-/* einde nav */
-
-img {
-    max-width: 40vw;
-    max-height: 40vw;  /* Anders klopt Eye-candy afbeeldingen niet */
-    min-height: 0.1vh;
-    min-width: 0.1vw;
-    margin: 0.1em;
-}
-
 .winkel img {
-    margin: 4em;
-    max-height: 50vw;
-    max-width: 50vw;
+    margin: 1em;
+    max-width: 8em;
 }
 
 .button{
@@ -219,7 +226,7 @@ img {
     transition: all .1s linear;
 }
 
-button:visited{
+.button:visited{
     background-color: #6169C2;
 }
 
@@ -228,11 +235,16 @@ button:visited{
     color:#464a75;
 }
 
-button:active {
+.button:active {
     background-color: #54BF94 ;
     transform: translateY(3px);
     box-shadow: none;
   }
+
+.button:focus{
+    border: #54BF94;
+    border-radius: 0.5em;
+}
 
 /*portfolio link hover*/
 .a-portfolio {
@@ -253,4 +265,66 @@ button:active {
     transform: scale(1.01) translate(0, -30px);
     background-color: #464a75;
     opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    h1, h2, h3, li {
+        font-family: 'EB Garamond', serif;
+        color: #464a75;
+        text-align: center;
+        font-size: 90%;
+    }
+
+    p {
+        font-size: 70%;
+    }
+
+    header h1, h2 {
+        margin-top: 1em;
+    }
+
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        flex-direction: column;
+        text-align: left;
+        width: 15em;
+        height: 15em;
+        min-width: 10em;
+        min-height: 10em;
+        background-color: rgba(220, 222, 245, 0.97);
+        border-radius: 50%;
+        line-height: 1em;
+        padding: 10%;
+        position: absolute;
+    }
+
+    .winkel {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-color: #cccdff;
+        height: auto;
+        width: 80vw;
+        padding: 3%;
+        margin: 2%;
+    }
+
+    .winkel img {
+        max-height: 20vh;
+        max-width: 80vw;
+    }
+
+    .tekst-container {
+        max-width: 60vw;
+        min-width: 20vw;
+        padding: 4%;
+    }
+
+    label {
+        font-size: 0.8em;
+    }
 }
