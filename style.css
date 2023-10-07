@@ -8,6 +8,11 @@
 }   
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+}
 
 h1, h2, h3, li {
     font-family: 'EB Garamond', serif;
@@ -107,7 +112,7 @@ footer {
 .tekst-container {
     max-width: 40vw;
     min-width: 20vw;
-    margin: 0 auto; /* Centreer de container horizontaal in de viewport (optioneel) */
+    margin: 0 auto; /* Centreer de container horizontaal in de viewport */
     padding: 3%;
 }
 
@@ -134,9 +139,8 @@ footer {
     align-items: center;
     flex-direction: column;
     background-color: #cccdff;
-    height: 100vh;
-    width: 20vw;
     height: 50vh;
+    width: 20vw;
     padding: 2%;
     margin: 2%;
 }
@@ -192,13 +196,47 @@ a:focus{
 /* einde nav */
 
 img {
-    max-width: 70vw;
-    max-height: 70vh;  /* Anders klopt Eye-candy afbeeldingen niet */
+    max-width: 50vw;
+    max-height: 50vh;  /* Anders klopt Eye-candy afbeeldingen niet */
+    min-height: 0.1vh;
+    min-width: 0.1vw;
+    margin: 0.1em;
 }
 
-.container:first-child{
-    max-width: 30vw;
+.winkel img {
+    margin: 4em;
 }
+
+.button{
+    background-color: #F5F5F5;
+    color: #464a75;
+    text-decoration: none;
+    box-shadow: 0 5px 0 #414682;
+    border: none;
+    border-radius: 0.5em;
+    padding: 1em;
+    padding: 15px 32px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+
+button:visited{
+    background-color: #6169C2;
+}
+
+.button:hover {
+    background-color: #6FFFC5;
+    color:#464a75;
+}
+
+button:active {
+    background-color: #54BF94 ;
+    transform: translateY(3px);
+    box-shadow: none;
+  }
+
 /*portfolio link hover*/
 .a-portfolio {
     padding: 0px;
@@ -211,16 +249,11 @@ img {
     transition: all 500ms ease;
     max-width: 100%;
     max-height: 50%;
+    margin: 0px;
 }
 
 .project img:hover {
     transform: scale(1.01) translate(0, -30px);
     background-color: #464a75;
     opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
 }
