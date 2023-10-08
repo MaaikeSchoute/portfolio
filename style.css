@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, Open Sans, sans-serif;
     box-sizing: border-box;
     text-align: left;
-    color:#464a75;
-    margin: 0; 
+    color: #464a75;
+    margin: 0;
     padding: 0;
-}   
+}
 
 body {
     background-image: url('img/icoontjes/achtergrond3.png');
     background-size: 70vw;
     background-repeat: repeat;
     background-position: center top;
-    background-color:#F5F5F5;
+    background-color: #F5F5F5;
 }
 
 header {
@@ -43,9 +43,14 @@ footer {
 }
 
 h1, h2, h3, li {
-    font-family: 'EB Garamond', serif;
-    color:#464a75;
+    font-family: EB Garmond;
+    color: #464a75;
     text-align: center;
+    line-height: 1em;
+}
+
+header h1 {
+    margin-top: 0.3em;
 }
 
 nav {
@@ -69,20 +74,20 @@ a {
     text-decoration: none;
 }
 
-a:visited{
+a:visited {
     background-color: #DBDBDB;
 }
 
 a:hover {
-    background-color:rgba(220, 222, 245, 0.97);
+    background-color: rgba(220, 222, 245, 0.97);
     transition: all 500ms ease;
 }
 
-a:active{
-    background-color:#cccdff;
+a:active {
+    background-color: #cccdff;
 }
 
-a:focus{
+a:focus {
     border: #464a75;
     border-radius: 0.5em;
 }
@@ -97,19 +102,12 @@ img {
     margin: 0.1em;
 }
 
-.one-img-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-}
-
 fieldset {
     background-color: #F5F5F5;
     width: 70%;
     border: 0px;
     margin: 5%;
-    padding: 2%
+    padding: 2%;
 }
 
 .home {
@@ -131,7 +129,7 @@ fieldset {
     background-color: rgba(220, 222, 245, 0.97);
     border-radius: 50%;
     line-height: 1.2em;
-    padding:10%;
+    padding: 10%;
     position: absolute;
 }
 
@@ -149,10 +147,10 @@ fieldset {
     100% {
       top: 50%;
     }
-  }
+}
 
-.home .circle{
-    bottom:100%;
+.home .circle {
+    bottom: 100%;
     animation-name: slide;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -160,15 +158,11 @@ fieldset {
     animation-iteration-count: infinite;
 }
 
-.langere-pagina {
-    height: 100vh;
-}
-
 .achtergrond {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: rgb(245, 245, 245, 0.97);
+    background-color: rgba(245, 245, 245, 0.97);
     width: 100vw;
     border-top: 1px solid #464a75;
     border-bottom: 1px solid #464a75;
@@ -185,14 +179,13 @@ fieldset {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .project {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    background-color: rgb(220, 222, 245); 
+    background-color: rgb(220, 222, 245);
     width: 30vw;
     height: 29vw;
     padding: 0;
@@ -215,7 +208,7 @@ fieldset {
     max-width: 8em;
 }
 
-.button{
+.button {
     background-color: #F5F5F5;
     color: #464a75;
     text-decoration: none;
@@ -230,22 +223,22 @@ fieldset {
     transition: all .1s linear;
 }
 
-.button:visited{
+.button:visited {
     background-color: #6169C2;
 }
 
 .button:hover {
     background-color: #6FFFC5;
-    color:#464a75;
+    color: #464a75;
 }
 
 .button:active {
-    background-color: #54BF94 ;
+    background-color: #54BF94;
     transform: translateY(3px);
     box-shadow: none;
-  }
+}
 
-.button:focus{
+.button:focus {
     border: #54BF94;
     border-radius: 0.5em;
 }
@@ -273,9 +266,6 @@ fieldset {
 
 @media (max-width: 768px) {
     h1, h2, h3, li {
-        font-family: 'EB Garamond', serif;
-        color: #464a75;
-        text-align: center;
         font-size: 90%;
     }
 
@@ -287,35 +277,23 @@ fieldset {
         margin-top: 1em;
     }
 
-
     .circle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: justify;
-        flex-direction: column;
-        text-align: left;
         width: 15em;
         height: 15em;
         min-width: 10em;
         min-height: 10em;
-        background-color: rgba(220, 222, 245, 0.97);
-        border-radius: 50%;
-        line-height: 1em;
-        padding: 10%;
-        position: absolute;
     }
 
     .winkel {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        background-color: #cccdff;
         height: auto;
         width: 30vw;
         padding: 3%;
-        margin: 2%;
+    }
+
+    img {
+        max-width: 30vw;
+        max-height: 30vw;
+        margin: 0.08em;
     }
 
     .winkel img {
@@ -333,19 +311,11 @@ fieldset {
         font-size: 0.8em;
     }
 
-    .button{
-        background-color: #F5F5F5;
-        color: #464a75;
-        text-decoration: none;
-        box-shadow: 0 5px 0 #414682;
-        border: none;
-        border-radius: 0.5em;
+    .button {
         padding: 0.8em;
         padding: 0.8em 1.8em;
         font-size: 0.8em;
         margin: 0.4em 0.2em;
-        cursor: pointer;
-        transition: all .1s linear;
     }
 
     fieldset {
