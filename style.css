@@ -68,6 +68,13 @@ ul {
     justify-content: right;
 }
 
+li {
+  padding: 1em;
+  background-color: #E5DB9F;
+  border-radius: 0.1px;
+  border-color: #464a75;
+}
+
 a {
     font-size: 0.9em;
     padding: 1vw;
